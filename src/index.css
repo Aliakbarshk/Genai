@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Germania+One&family=Jockey+One&family=Luckiest+Guy&family=Outfit:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  background-size: cover;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+
+
+}

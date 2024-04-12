@@ -1,0 +1,241 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background-size:cover;
+    overflow-x: hidden;
+    
+
+}
+.main .nav { 
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    font-size: 22px;
+    padding: 20px;
+    color:#585858;
+}
+.main .nav img{
+    width: 40px;
+    border-radius: 50%;
+}
+.main-container{
+   min-width: 900px;
+   position: relative;
+   left: 12%;;
+   margin: auto;
+}
+.main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    color:#c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+    position: relative;
+    left: 18%;
+}
+.main .greet span{
+    background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main .cards{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+    left: -10%;
+    visibility: hidden;
+}
+.main .card{
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10%;
+    transition: 0.80ms;
+}
+.main .card:hover{
+    font-size:20px;
+    background-color: rgb(206, 206, 206);
+    
+}
+.main .card img{
+width: 35px;
+padding: 5px;
+position: absolute;
+background-size: cover;
+background-color: white;
+border-radius: 20px;
+bottom: 26px;
+cursor: pointer;
+}
+
+.main-bottom {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    max-width: 600px;
+    padding: 0px 2px;
+    margin: auto;
+    left: 35%;
+
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    position: relative;
+    bottom:0% ;
+    left: -7%;
+
+
+}
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div{
+   position: relative;
+   bottom: 0%;
+   left: -2%;
+    gap: 15px;
+}
+
+.main .bottom-info{
+    font-style: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 200;
+    position: absolute;
+    left: -4%;
+}
+.result {
+    position: fixed;
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+  
+
+}
+
+.result::-webkit-scrollbar{
+    display:none;
+}
+
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 0%;
+}
+
+.result img{
+    width: 40px;
+    border-radius:50% ;
+}
+.result-data{ 
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.loader{
+    width: 100%;
+    height: 20%;
+    display:flex ;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    bottom:20% ;
+    overflow-x: visible;
+}
+.loader hr{ 
+    border-radius: 4px;
+    border:none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+    overflow-x: visible;
+}
+
+@keyframes loader {
+0%{
+   background-position: -800px;
+}
+100%{
+  background-position:800px 0px;
+}
+
+}
+@media only screen and (max-width: 600px) {
+  .main-container {
+    min-width: 100%;
+    left: 0;
+  }
+  .main .greet {
+    font-size: 36px;
+    left: 10%;
+  }
+ .search-box{
+    width:253px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    position:absolute;
+    bottom:0% ;
+    left: -7%;
+
+
+}
+.search-box img{
+    width: 10px;
+    cursor: pointer;
+    position: relative;
+    left:-28%;
+}
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.search-box div{
+   position: relative;
+   bottom: 0%;
+   left: -2%;
+    gap: 0px;
+}
+
+.main .bottom-info {
+    font-size: 10px;
+    padding-right: 43%;
+}
+.result-data p{
+    font-size: 10px;
+}
+}
